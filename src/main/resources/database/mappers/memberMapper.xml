@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <!-- namesapce의 이름으로 구분한다.  -->
+<mapper namespace="com.iu.s3.member.MemberDAO">
+	
+	<update id="setUpate" parameterType="com.iu.s3.member.MemberDTO">
+		update member values{#{name},#{email},#{phone}}
+	</update>
+	<insert id="setWrite" parameterType="com.iu.s3.member.MemberDTO">
+		insert into member values(#{name},#{email},#{phone})
+	</insert>
+	
+	<select id="getSelect" parameterType="java.lang.Long" resultType="com.iu.s3.member.MemberDTO">
+		select *from member where =#{num}
+		<!-- 최종 담을 곳 -->
+	</select>
+	
+	<select id="getList" resultType="java.util.List">
+		select *from member order by name desc
+	</select>
+	
+	<delete id="setDelete" parameterType="com.iu.s3.member.MemberDTO">
+		delete member where Id = #{name}
+	</delete>
+</mapper>

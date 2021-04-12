@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.iu.s3.member.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="com.iu.s3.bankbook.BankBookDTO" alias="BankBookDTO"/>
+	</typeAliases>
+</configuration>  

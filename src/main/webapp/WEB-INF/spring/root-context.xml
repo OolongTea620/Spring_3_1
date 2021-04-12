@@ -16,6 +16,7 @@
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property> <!-- 연결 객체 -->
 		<property name="mapperLocations" value="classpath:database/mappers/*Mapper.xml"></property> <!-- database의 위치 -->
+		<property name="configLocation" value="classpath:database/config/conf.xml"></property>	
 	</bean>
 	
 	<!-- 미리 전송과 결과를 맵핑 -->
